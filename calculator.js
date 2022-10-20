@@ -66,7 +66,8 @@ app.post("/", function (req, res) {
 
     var num23 = Number(req.body.n23);
     var num24 = Number(req.body.n24);
-    var result12 = (num23 * num24)+result11;
+    var result12 = (num23 * num24)+
+    result11;
     res.send("the result of this calculation is: " + result12)
 
 })
