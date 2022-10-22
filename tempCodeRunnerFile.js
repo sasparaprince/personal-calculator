@@ -1,6 +1,0 @@
-Number(req.body.n4),
-            Number(req.body.n6),
-            Number(req.body.n8),
-            Number(req.body.n10),
-            Number(req.body.n12),
-            Number(req.body.n14),

@@ -1,12 +1,17 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
+var path = require('path');
+
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/index.html")
 });
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.post("/", function (req, res) {
     var num1 = Number(req.body.n1);
@@ -66,8 +71,7 @@ app.post("/", function (req, res) {
 
     var num23 = Number(req.body.n23);
     var num24 = Number(req.body.n24);
-    var result12 = (num23 * num24)+
-    result11;
+    var result12 = (num23 * num24)+result11;
     res.send("the result of this calculation is: " + result12)
 
 })
