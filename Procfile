@@ -1,1 +1,1 @@
-web: node appp.js
+web: node calculator.js
